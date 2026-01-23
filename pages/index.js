@@ -162,11 +162,14 @@ const Home = ({
                   </div>
                 </div>
               )}
+</div>
 
-              <Pagination
-                totalPages={Math.ceil(posts.length / showPosts)}
-                currentPage={1}
-              />
+{/* FULL WIDTH PAGINATION */}
+<div className="col-12 flex justify-center mt-12">
+  <Pagination
+    totalPages={Math.ceil(posts.length / showPosts)}
+    currentPage={1}
+  />
             </div>
             {/* sidebar */}
             <Sidebar

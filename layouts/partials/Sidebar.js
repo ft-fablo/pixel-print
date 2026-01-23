@@ -86,6 +86,7 @@ const Sidebar = ({ posts, categories, className }) => {
       )}
 
       {/* featured widget */}
+      {/*
       {featured_posts.enable && (
         <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
           <h4 className="section-title mb-12 text-center">Featured</h4>
@@ -179,7 +180,7 @@ const Sidebar = ({ posts, categories, className }) => {
                   </div>
                 ))}
         </div>
-      )}
+      )}*/}
 
       {/* newsletter */}
       {newsletter.enable && (

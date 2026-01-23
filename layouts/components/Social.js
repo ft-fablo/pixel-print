@@ -83,36 +83,6 @@ const Social = ({ source, className }) => {
           </a>
         </li>
       )}
-      {stackoverflow && (
-        <li className="inline-block">
-          <a
-            aria-label="stackoverflow"
-            href={`${stackoverflow}/#!`}
-            target="_blank"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-            rel="noopener noreferrer nofollow"
-          >
-            <IoLogoStackoverflow />
-          </a>
-        </li>
-      )}
-      {twitter && (
-        <li className="inline-block">
-          <a
-            aria-label="twitter"
-            href={`${twitter}/#!`}
-            target="_blank"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-            rel="noopener noreferrer nofollow"
-          >
-            <IoLogoTwitter />
-          </a>
-        </li>
-      )}
       {instagram && (
         <li className="inline-block">
           <a
@@ -158,21 +128,7 @@ const Social = ({ source, className }) => {
           </a>
         </li>
       )}
-      {github && (
-        <li className="inline-block">
-          <a
-            aria-label="github"
-            href={`${github}/#!`}
-            target="_blank"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-            rel="noopener noreferrer nofollow"
-          >
-            <IoLogoGithub />
-          </a>
-        </li>
-      )}
+      
       {gitlab && (
         <li className="inline-block">
           <a
