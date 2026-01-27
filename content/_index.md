@@ -2,7 +2,7 @@
 banner:
   title: Welcome **!**
   title_small: "to Pixel Print House"
-  content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
+  content: Print excellence in Every Pixel
   image_enable: true
   image: /images/banner-author.png
   button:
@@ -12,16 +12,18 @@ banner:
     rel: ""
 
 featured_posts:
-  enable: true
-  title: Featured Posts
+  enable: true  
+  title: Top Services
 
 promotion:
-  enable: false
-  image: /images/promotion.png
-  link: "#"
+  enable: true
+  location: "9CVJ+H7V Ajman - United Arab Emirates"
+  lat: 25.393972
+  lng: 55.430667
 
 recent_posts:
   title: Recent Posts
   enable: false
+
 
 ---

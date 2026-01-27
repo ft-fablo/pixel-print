@@ -22,8 +22,8 @@
   },
   "params": {
     "tag_manager_id": "",
-    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/) | Distributed by [ThemeWagon](https://themewagon.com/)"
+    "footer_content": "Print excellence in Every Pixel",
+    "copyright": "Designed By [fablo](https://github.com/ft-fablo)"
   },
   "metadata": {
     "meta_author": "Statichunt",
@@ -56,5 +56,13 @@
     "enable": true,
     "shortname": "themefisher-template",
     "settings": {}
-  }
+  },
+  "promotion": {
+  "enable": true,
+  "image": "/images/promo.jpg",
+  "location": "123 Main Street, New York, NY",
+  "lat": 40.712776,
+  "lng": -74.005974
+}
+
 }
