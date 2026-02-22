@@ -123,10 +123,7 @@ const Home = ({
                                 {post.frontmatter.title}
                               </Link>
                             </h3>
-                            <p className="inline-flex items-center font-bold">
-                              <FaRegCalendar className="mr-1.5" />
-                              {dateFormat(post.frontmatter.date)}
-                            </p>
+                            
                           </div>
                         </div>
                       ))}
@@ -137,24 +134,19 @@ const Home = ({
             )}
 
             {/* ===== Promotion ===== */}
-            {promotion.enable && (
-  <div className="section pt-0">
-
-    {/* Map under the promotion image */}
-    {promotion.lat && promotion.lng && (
-      <div className="section pt-6">
-  <Map
-    lat={25.393972}
-    lng={55.430667}
-    location="Dubai, UAE"
-  />
-</div>
-
-    )}
+            
+            {/*{promotion.enable && (
+  <div className="section pt-6">
+    <Map
+      lat={25.393972}
+      lng={55.430667}
+      location="Dubai, UAE"
+    />
   </div>
-)}  
+)}*/}
+{/* <Map lat={25.393972} lng={55.430667} location="Location" /> */}
 
-            {/* ===== Recent Posts ===== */}
+            {/* ===== Recent Posts ===== *
             {recent_posts.enable && (
               <div className="section pt-0">
                 {markdownify(recent_posts.title, "h2", "section-title")}
@@ -167,6 +159,7 @@ const Home = ({
                 </div>
               </div>
             )}
+            */}
 
             {/* ===== Pagination ===== */}
             <div className="mt-12 flex justify-center">

@@ -50,7 +50,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full"
                   name="name"
                   type="text"
-                  placeholder="Thomas Milano"
+                  placeholder="Bruce Wayne"
                   required
                 />
               </div>
@@ -71,7 +71,7 @@ const Contact = ({ data }) => {
               </div>
               <div className="mb-6">
                 <label className="mb-2 block font-secondary" htmlFor="subject">
-                  Subject
+                  Project
                   <small className="font-secondary text-sm text-primary">
                     *
                   </small>
@@ -80,7 +80,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full"
                   name="subject"
                   type="text"
-                  placeholder="Blog advertisement"
+                  placeholder="Printing enquiry"
                   required
                 />
               </div>
@@ -93,7 +93,8 @@ const Contact = ({ data }) => {
                 </label>
                 <textarea
                   className="form-textarea w-full"
-                  placeholder="Hello I’m Mr ‘x’ from………….."
+                  name="message"
+                  placeholder="Tell us about your project..."
                   rows="7"
                 />
               </div>

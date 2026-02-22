@@ -1,25 +1,19 @@
 ---
-title: "How to make toys from old Olarpaper"
+title: "Corparate gifts"
 date: 2022-04-04T04:00:00Z
-image: /images/post/post-4.png
-categories: ["robotics", "programming"]
-featured: false
+image: /images/post/corp-2.png
+categories: ["Services"]
+featured: true
 draft: false
 ---
 
-Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+Corporate gifting is treated as a reflection of professionalism and intent. We prioritize presentation, material integrity, and refined detailing to ensure each piece communicates credibility.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+From executive gift sets to custom-packaged merchandise, every component is aligned—product selection, packaging structure, print accuracy, and finishing techniques are chosen to maintain cohesion. Attention is given to texture, weight, and opening experience, ensuring the presentation feels composed and deliberate. Finishes such as embossing, foil stamping, and custom inserts are applied with restraint to elevate without distraction. The result is gifting that strengthens relationships through craftsmanship, thoughtful assembly, and measured design.
 
 ## Covid-19 Situation
-
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
-
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-![alter-text](/images/post/post-1.png)
-*Example Caption*
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+  <img src="/images/post/corp-1.png" className="rounded-lg w-full h-auto" />
+  <img src="/images/post/corp-2.png" className="rounded-lg w-full h-auto" />
+  <img src="/images/post/corp-3.png" className="rounded-lg w-full h-auto" />
+</div>

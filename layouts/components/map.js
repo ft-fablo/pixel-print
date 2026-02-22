@@ -2,6 +2,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useEffect } from "react";
+// TODO:
+// - Confirm marker icons are loading from /public/images
+// - Verify MapContainer height & single initialization
 
 // Fix for default marker icon not showing
 delete L.Icon.Default.prototype._getIconUrl;

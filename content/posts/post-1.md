@@ -1,25 +1,18 @@
 ---
-title: "How to make toys from old Olarpaper"
-date: 2022-04-04T01:00:00Z
-image: /images/post/post-1.png
-categories: ["programming"]
-featured: true
-draft: false
+title: "Box Printing"
+image: /images/post/box-1.png
+categories: ["Services"]
+
 ---
 
-Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+Box printing at Pixel Print House is approached with precision and restraint. We focus on structure, proportion, and finish to ensure packaging feels deliberate, balanced, and well-crafted.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+From rigid presentation boxes to folding cartons and custom die-cut formats, every detail is carefully considered—material selection, board thickness, print clarity, and surface treatment all contribute to the final result. We evaluate how the box opens, how it feels in hand, and how graphics align seamlessly across edges and folds. Clean layouts and controlled typography are paired with consistent color reproduction to maintain accuracy across production runs. Finishes such as matte lamination, soft-touch coating, embossing, debossing, and foil are applied with intention—enhancing the form without overpowering it. Structural integrity is treated with equal importance, ensuring durability, precise creasing, and refined edges that support both function and aesthetics. The result is packaging that presents the product with clarity and confidence, communicating brand intent through craftsmanship, balance, and measured detail rather than excess. 
 
-## Covid-19 Situation
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
 
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-![alter-text](/images/post/post-1.png)
-*Example Caption*
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+  <img src="/images/post/box-1.png" className="rounded-lg w-full h-auto" />
+  <img src="/images/post/box-2.png" className="rounded-lg w-full h-auto" />
+  <img src="/images/post/box-3.png" className="rounded-lg w-full h-auto" />
+</div>

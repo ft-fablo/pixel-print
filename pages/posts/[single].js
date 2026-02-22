@@ -1,7 +1,6 @@
 import config from "@config/config.json";
 import PostSingle from "@layouts/PostSingle";
 import { getSinglePage } from "@lib/contentParser";
-import { getTaxonomy } from "@lib/taxonomyParser";
 import parseMDX from "@lib/utils/mdxParser";
 const { blog_folder } = config.settings;
 
@@ -10,8 +9,6 @@ const Article = ({
   post,
   mdxContent,
   slug,
-  allCategories,
-  relatedPosts,
   posts,
   currentPath,
 }) => {
@@ -23,8 +20,6 @@ const Article = ({
       content={content}
       mdxContent={mdxContent}
       slug={slug}
-      allCategories={allCategories}
-      relatedPosts={relatedPosts}
       posts={posts}
       currentPath={currentPath}
     />
@@ -52,35 +47,18 @@ export const getStaticProps = async ({ params }) => {
   const posts = getSinglePage(`content/${blog_folder}`);
   const post = posts.find((p) => p.slug == single);
   const mdxContent = await parseMDX(post.content);
-  // related posts
-  const relatedPosts = posts.filter((p) =>
-    post.frontmatter.categories.some((cate) =>
-      p.frontmatter.categories.includes(cate)
-    )
-  );
 
-  //all categories
-  const categories = getTaxonomy(`content/${blog_folder}`, "categories");
-  const categoriesWithPostsCount = categories.map((category) => {
-    const filteredPosts = posts.filter((post) =>
-      post.frontmatter.categories.includes(category)
-    );
-    return {
-      name: category,
-      posts: filteredPosts.length,
-    };
-  });
   return {
     props: {
       post: post,
       mdxContent: mdxContent,
       slug: single,
-      allCategories: categoriesWithPostsCount,
-      relatedPosts: relatedPosts,
+// removed related posts
       posts: posts,
       currentPath: `/posts/${single}`,
     },
   };
 };
+
 
 export default Article;

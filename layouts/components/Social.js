@@ -74,9 +74,6 @@ const Social = ({ source, className }) => {
             aria-label="facebook"
             href={`${facebook}/#!`}
             target="_blank"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
             rel="noopener noreferrer nofollow"
           >
             <IoLogoFacebook />
@@ -89,9 +86,6 @@ const Social = ({ source, className }) => {
             aria-label="instagram"
             href={`${instagram}/#!`}
             target="_blank"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
             rel="noopener noreferrer nofollow"
           >
             <IoLogoInstagram />
@@ -330,9 +324,6 @@ const Social = ({ source, className }) => {
             aria-label="whatsapp"
             href={`${whatsapp}/#!`}
             target="_blank"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
             rel="noopener noreferrer nofollow"
           >
             <IoLogoWhatsapp />
@@ -446,18 +437,14 @@ const Social = ({ source, className }) => {
       )}
       {email && (
         <li className="inline-block">
-          <a aria-label="email" href={`mailto:${email}`} onClick={(e) => {
-            e.preventDefault();
-          }}>
+          <a aria-label="email" href={`mailto:${email}`}> 
             <IoMail />
           </a>
         </li>
       )}
       {phone && (
         <li className="inline-block">
-          <a aria-label="telephone" href={`tel:${phone}`} onClick={(e) => {
-            e.preventDefault();
-          }}>
+          <a aria-label="telephone" href={`tel:${phone}`}>
             <IoCall />
           </a>
         </li>
