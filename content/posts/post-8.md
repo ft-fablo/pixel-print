@@ -12,7 +12,7 @@ From rigid presentation boxes to folding cartons and custom die-cut formats, eve
 
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-  <img src="/images/post/box-1.png" className="rounded-lg w-full h-auto" />
-  <img src="/images/post/box-2.png" className="rounded-lg w-full h-auto" />
-  <img src="/images/post/box-3.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/box-1.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/box-2.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/box-3.png" className="rounded-lg w-full h-auto" />
 </div>

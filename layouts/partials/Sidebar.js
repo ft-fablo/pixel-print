@@ -28,7 +28,7 @@ const Sidebar = ({ posts, categories, className }) => {
         <div className="relative rounded border border-border p-6 text-center dark:border-darkmode-border">
           <ImageFallback
             className="-z-[1]"
-            src="/images/map.svg"
+            src="images/map.svg"
             fill={true}
             alt="bg-map"
           />

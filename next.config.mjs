@@ -1,21 +1,10 @@
-
-const isProd = process.env.NODE_ENV === "production";
-
-const basePath = isProd ? "/geeky-nextjs" : "";
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath,
-  assetPrefix: basePath,
+  output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
+  // assetPrefix: './' <--- DELETE THIS LINE IF IT IS THERE
 };
-
 export default nextConfig;

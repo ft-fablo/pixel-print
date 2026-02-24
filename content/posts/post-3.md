@@ -14,7 +14,7 @@ From branded stationery and everyday merchandise to curated promotional sets, ma
 ## Covid-19 Situation
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-  <img src="/images/post/promo-1.png" className="rounded-lg w-full h-auto" />
-  <img src="/images/post/promo-2.png" className="rounded-lg w-full h-auto" />
-  <img src="/images/post/promo-3.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/promo-1.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/promo-2.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/promo-3.png" className="rounded-lg w-full h-auto" />
 </div>

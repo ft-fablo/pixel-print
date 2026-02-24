@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Pixel print house",
-    "base_url": "/",
+    "base_url": "",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_white": "/images/logo-light.png",

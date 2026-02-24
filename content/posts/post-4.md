@@ -13,7 +13,7 @@ From executive gift sets to custom-packaged merchandise, every component is alig
 
 ## Covid-19 Situation
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-  <img src="/images/post/corp-1.png" className="rounded-lg w-full h-auto" />
-  <img src="/images/post/corp-2.png" className="rounded-lg w-full h-auto" />
-  <img src="/images/post/corp-3.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/corp-1.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/corp-2.png" className="rounded-lg w-full h-auto" />
+  <img src="images/post/corp-3.png" className="rounded-lg w-full h-auto" />
 </div>
