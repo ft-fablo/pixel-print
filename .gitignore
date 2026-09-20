@@ -38,3 +38,10 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# archives & scratch
+pixel-print-godaddy.zip
+pixel-print-old-site-backup.zip
+scratch/
+
+

@@ -2,3 +2,16 @@ b,
 strong {
   @apply font-semibold;
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 130, 114, 0.12) 0%, transparent 70%);
+}

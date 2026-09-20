@@ -5,14 +5,48 @@
       "url": "/"
     },
     {
+      "name": "Services",
+      "url": "/services",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Custom Box Packaging",
+          "url": "/services/box-printing"
+        },
+        {
+          "name": "Luxury Paper Bags",
+          "url": "/services/bag-printing"
+        },
+        {
+          "name": "Business Cards & Stationery",
+          "url": "/services/business-cards"
+        },
+        {
+          "name": "Corporate Gifts & Sets",
+          "url": "/services/corporate-gifts"
+        },
+        {
+          "name": "Promotional Merchandise",
+          "url": "/services/promotional-items"
+        },
+        {
+          "name": "Fabric & Sublimation",
+          "url": "/services/fabric-printing"
+        },
+        {
+          "name": "Advertising & Signage",
+          "url": "/services/advertising-signage"
+        }
+      ]
+    },
+    {
       "name": "About",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Contact & Quote",
       "url": "/contact"
     }
-    
   ],
   "footer": [
     {
@@ -20,16 +54,16 @@
       "url": "/"
     },
     {
+      "name": "Services Catalog",
+      "url": "/services"
+    },
+    {
       "name": "About",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Request a Quote",
       "url": "/contact"
-    },
-    {
-      "name": "Privacy Policy",
-      "url": "#"
     }
   ]
 }

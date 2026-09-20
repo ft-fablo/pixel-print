@@ -2,38 +2,38 @@
   "colors": {
     "default": {
       "theme_color": {
-        "primary": "#2ba283",
-        "body": "#fff",
-        "border": "#e1e1e1",
-        "theme_light": "#f2f2f2",
-        "theme_dark": "#1a202c"
+        "primary": "#008272",
+        "body": "#ffffff",
+        "border": "#e2e8f0",
+        "theme_light": "#f8fafc",
+        "theme_dark": "#0f172a"
       },
       "text_color": {
-        "default": "#555",
-        "dark": "#222",
-        "light": "#999"
+        "default": "#334155",
+        "dark": "#0f172a",
+        "light": "#64748b"
       }
     },
     "darkmode": {
       "theme_color": {
-        "primary": "#059669",
-        "body": "#111",
-        "border": "#636363",
-        "theme_light": "#f4f7f7",
-        "theme_dark": "#383848"
+        "primary": "#14b8a6",
+        "body": "#090d16",
+        "border": "#1e293b",
+        "theme_light": "#131b2e",
+        "theme_dark": "#0b0f19"
       },
       "text_color": {
-        "default": "#a4a4a4",
-        "dark": "#ddd",
-        "light": "#fff"
+        "default": "#94a3b8",
+        "dark": "#f8fafc",
+        "light": "#e2e8f0"
       }
     }
   },
   "fonts": {
     "font_family": {
-      "primary": "Raleway:wght@400",
+      "primary": "Plus+Jakarta+Sans:wght@400;500;600;700;800",
       "primary_type": "sans-serif",
-      "secondary": "Merriweather Sans:wght@400;700",
+      "secondary": "Outfit:wght@400;500;600;700",
       "secondary_type": "sans-serif"
     },
     "font_size": {

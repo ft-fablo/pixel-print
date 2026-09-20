@@ -2,86 +2,424 @@ body.menu-open {
   @apply overflow-hidden pr-0;
 }
 
-.header {
-  @apply top-0 z-50 border-b bg-body py-[33px] dark:border-darkmode-border dark:bg-darkmode-body;
+// Floating Liquid Glass Capsule Header (Apple-inspired)
+.header-floating-wrapper {
+  @apply sticky top-3 sm:top-5 z-50 w-full px-3 sm:px-6 pointer-events-none transition-all duration-300;
 }
 
-// navbar items
+.liquid-glass-capsule {
+  @apply pointer-events-auto relative mx-auto flex items-center justify-between px-4 sm:px-6 py-2 sm:py-2.5 rounded-full max-w-6xl w-full;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 10px 32px -4px rgba(0, 0, 0, 0.06),
+    0 2px 8px -2px rgba(0, 0, 0, 0.03),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.is-scrolled {
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+      0 14px 38px -6px rgba(0, 0, 0, 0.09),
+      inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04);
+  }
+}
+
+.dark .liquid-glass-capsule,
+[data-theme="dark"] .liquid-glass-capsule {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 16px 40px -8px rgba(0, 0, 0, 0.6),
+    0 2px 8px -2px rgba(0, 0, 0, 0.4),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+
+  &.is-scrolled {
+    background: rgba(17, 24, 39, 0.30);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 
+      0 20px 48px -8px rgba(0, 0, 0, 0.75),
+      inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.22);
+  }
+}
+
+// 3D Optical Glass Shine on Capsule
+.capsule-glass-shine {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    transparent 80%
+  );
+  z-index: 0;
+}
+
+.dark .capsule-glass-shine,
+[data-theme="dark"] .capsule-glass-shine {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.03) 40%,
+    transparent 80%
+  );
+}
+
+// Brand Logo in Capsule
+.navbar-brand {
+  @apply relative z-10 flex items-center shrink-0;
+  img {
+    @apply h-7 sm:h-8 w-auto object-contain transition-transform duration-200 hover:scale-[1.02];
+  }
+}
+
+// Nav items inside Capsule
+.nav-capsule-link {
+  @apply relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full text-[15px] xl:text-base font-semibold tracking-tight text-dark/80 hover:text-dark dark:text-darkmode-light dark:hover:text-white transition-all duration-200;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  &.active {
+    @apply font-bold text-dark dark:text-white;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+  }
+}
+
+.dark .nav-capsule-link,
+[data-theme="dark"] .nav-capsule-link {
+  color: #e2e8f0;
+
+  &:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  &.active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+// Liquid Glass Dropdown
+.nav-dropdown-glass {
+  @apply min-w-[270px] rounded-2xl p-2.5 shadow-2xl;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 24px 60px -12px rgba(0, 0, 0, 0.14),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dark .nav-dropdown-glass,
+[data-theme="dark"] .nav-dropdown-glass {
+  background: rgba(17, 24, 39, 0.80);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    0 24px 60px -12px rgba(0, 0, 0, 0.85),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.nav-dropdown-link-glass {
+  @apply flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-semibold text-dark/80 dark:text-darkmode-light transition-all;
+
+  &:hover {
+    @apply text-primary bg-primary/10;
+  }
+
+  &.active {
+    @apply text-primary font-bold bg-primary/10;
+  }
+}
+
+.dark .nav-dropdown-link-glass,
+[data-theme="dark"] .nav-dropdown-link-glass {
+  color: #e2e8f0;
+  &:hover {
+    color: #14b8a6;
+    background: rgba(20, 184, 166, 0.16);
+  }
+  &.active {
+    color: #14b8a6;
+    font-weight: 700;
+    background: rgba(20, 184, 166, 0.2);
+  }
+}
+
+// Liquid Glass Mobile Drawer
+.mobile-drawer-glass {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(30px) saturate(190%);
+  -webkit-backdrop-filter: blur(30px) saturate(190%);
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.dark .mobile-drawer-glass,
+[data-theme="dark"] .mobile-drawer-glass {
+  background: rgba(11, 16, 26, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Floating Liquid Glass Action Buttons (Bottom Right)
+.floating-actions-container {
+  @apply fixed bottom-5 sm:bottom-6 right-5 sm:right-6 z-40 flex flex-col items-end gap-3 pointer-events-auto;
+}
+
+.liquid-glass-float-btn {
+  @apply relative flex h-[52px] w-[52px] sm:h-[58px] sm:w-[58px] items-center justify-center rounded-full transition-all duration-300;
+  padding: 0 !important;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 10px 25px -4px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+    0 1px 2px 0 rgba(255, 255, 255, 1) inset;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.06);
+  }
+
+  &.float-btn-whatsapp,
+  &.btn-whatsapp {
+    color: #25D366;
+    padding: 0 !important;
+    svg {
+      width: 29px !important;
+      height: 29px !important;
+      display: block;
+      transition: transform 0.3s ease;
+      @media (min-width: 640px) {
+        width: 35px !important;
+        height: 35px !important;
+      }
+    }
+    &:hover {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: rgba(37, 211, 102, 0.5);
+      box-shadow: 
+        0 14px 30px -4px rgba(37, 211, 102, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      svg {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &.float-btn-call,
+  &.btn-call {
+    color: #008272;
+    padding: 0 !important;
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+      display: block;
+      transition: transform 0.3s ease;
+      @media (min-width: 640px) {
+        width: 23px !important;
+        height: 23px !important;
+      }
+    }
+    &:hover {
+      background: rgba(0, 130, 114, 0.15);
+      border-color: rgba(0, 130, 114, 0.5);
+      box-shadow: 
+        0 14px 30px -4px rgba(0, 130, 114, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      svg {
+        transform: scale(1.08);
+      }
+    }
+  }
+}
+
+.dark .liquid-glass-float-btn,
+[data-theme="dark"] .liquid-glass-float-btn {
+  background: rgba(13, 19, 31, 0.82);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    0 14px 30px -4px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 1px 1px 0 rgba(255, 255, 255, 0.2) inset;
+
+  &.float-btn-whatsapp,
+  &.btn-whatsapp {
+    color: #25D366;
+    padding: 0 !important;
+    &:hover {
+      background: rgba(37, 211, 102, 0.25);
+      border-color: rgba(37, 211, 102, 0.5);
+      box-shadow: 
+        0 16px 36px -4px rgba(37, 211, 102, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    }
+  }
+
+  &.float-btn-call,
+  &.btn-call {
+    color: #14b8a6;
+    padding: 0 !important;
+    &:hover {
+      background: rgba(20, 184, 166, 0.25);
+      border-color: rgba(20, 184, 166, 0.5);
+      box-shadow: 
+        0 16px 36px -4px rgba(20, 184, 166, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    }
+  }
+
+  &.btn-call {
+    color: #14b8a6;
+    &:hover {
+      background: rgba(20, 184, 166, 0.2);
+      border-color: rgba(20, 184, 166, 0.4);
+      box-shadow: 
+        0 16px 36px -4px rgba(20, 184, 166, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    }
+  }
+}
+
+.liquid-glass-tooltip {
+  @apply pointer-events-none absolute right-full mr-3 whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-semibold opacity-0 translate-x-2 transition-all duration-200;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #1a1a1a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  .group:hover & {
+    @apply opacity-100 translate-x-0;
+  }
+}
+
+.dark .liquid-glass-tooltip,
+[data-theme="dark"] .liquid-glass-tooltip {
+  background: rgba(13, 19, 31, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f3f4f6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+// Seamless Borderless Hero Video (Popping out of Background)
+.hero-video-seamless {
+  position: relative;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  mask-image: radial-gradient(
+    ellipse 94% 92% at 50% 50%,
+    #000 62%,
+    rgba(0, 0, 0, 0.88) 75%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 94% 92% at 50% 50%,
+    #000 62%,
+    rgba(0, 0, 0, 0.88) 75%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+  );
+
+  video {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Fallback legacy header classes
+.header {
+  @apply sticky top-0 z-50 border-b border-border/70 bg-body/95 backdrop-blur-md py-4 dark:border-darkmode-border/70 dark:bg-darkmode-body/95 transition-all duration-300;
+}
+
 .navbar {
   @apply relative flex flex-wrap items-center justify-between;
 }
 
 .collapse-menu {
-  @apply fixed right-0 top-0 z-10 mx-0 h-[100vh] w-full max-w-[400px] items-center border-l border-l-dark  bg-body p-6 transition-transform duration-300 ease-in-out dark:bg-darkmode-body lg:static lg:flex lg:h-auto lg:w-auto lg:max-w-full lg:space-x-4 lg:border-l-0 lg:bg-transparent lg:p-0 xl:space-x-8;
-}
-
-.navbar-brand {
-  @apply text-xl font-semibold text-dark;
-  image {
-    @apply max-h-full max-w-full;
-  }
+  @apply fixed right-0 top-0 z-50 mx-0 h-[100vh] w-full max-w-[340px] items-center border-l border-border bg-body p-6 shadow-2xl transition-transform duration-300 ease-in-out dark:border-darkmode-border dark:bg-[#0b0f19] lg:static lg:flex lg:h-auto lg:w-auto lg:max-w-full lg:space-x-4 lg:border-l-0 lg:bg-transparent lg:p-0 lg:shadow-none xl:space-x-6;
 }
 
 .navbar-nav {
-  @apply mt-16 lg:mt-0;
+  @apply mt-12 lg:mt-0 flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-1;
 }
 
 .nav-item {
-  @apply mb-5 text-left lg:mb-0;
-
-  &.active {
-    @apply bg-primary text-white;
-  }
+  @apply w-full lg:w-auto;
 }
 
 .nav-link {
-  @apply rounded-[30px] px-6 py-2.5 text-left font-secondary text-[13.5px] capitalize  text-dark transition hover:bg-primary hover:text-white dark:text-darkmode-light md:px-3 md:py-3 lg:text-center xl:px-5;
-
+  @apply flex items-center px-4 py-2 text-sm font-semibold text-dark/80 transition-colors hover:text-primary dark:text-darkmode-text dark:hover:text-primary rounded-lg;
   &.active {
-    @apply bg-primary text-white;
+    @apply text-primary font-bold bg-primary/5 dark:bg-primary/10;
   }
 }
 
 .nav-dropdown {
-  @apply mr-0;
+  @apply relative;
 }
 
 .nav-dropdown-list {
-  @apply z-10 rounded-lg  border border-transparent bg-body p-4 shadow dark:border-darkmode-border dark:bg-black;
+  @apply z-50 min-w-[240px] rounded-xl border border-border/80 bg-white/95 backdrop-blur-lg p-2 shadow-xl dark:border-darkmode-border dark:bg-[#111827]/95;
 }
 
 .nav-dropdown-item {
-  @apply mb-1.5;
+  @apply mb-0.5;
 }
 
 .nav-dropdown-link {
-  @apply min-w-[150px] rounded py-2.5 px-3.5 text-base font-semibold  text-dark transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-light;
-
+  @apply flex items-center rounded-lg px-3.5 py-2.5 text-xs font-semibold text-dark/80 transition-colors hover:bg-primary/10 hover:text-primary dark:text-darkmode-text dark:hover:text-primary;
   &.active {
-    @apply bg-primary/10 text-primary;
+    @apply bg-primary/10 text-primary font-bold;
   }
 }
 
 // search style
 .search-icon {
-  @apply inline-block h-10 w-10 cursor-pointer rounded-full bg-primary p-2.5 text-xl text-white;
+  @apply flex h-9 w-9 items-center justify-center cursor-pointer rounded-full border border-border text-dark/70 hover:border-primary hover:text-primary dark:border-darkmode-border dark:text-darkmode-light transition-all;
 }
+
 .search-modal {
-  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body opacity-0 transition dark:bg-black md:h-full;
+  @apply invisible absolute top-0 left-0 right-0 z-50 h-full bg-body/95 backdrop-blur-md opacity-0 transition-all dark:bg-darkmode-body/95 flex items-center px-4;
   .form-input {
-    @apply h-full w-full border-0 px-4 text-lg;
+    @apply h-12 w-full border-b border-primary bg-transparent text-base;
   }
   .search-close {
-    @apply absolute top-1/2 right-2 -translate-y-1/2 p-3 text-h4;
+    @apply absolute top-1/2 right-4 -translate-y-1/2 p-2 text-dark hover:text-primary;
   }
   &.open {
     @apply visible opacity-100;
-  }
-}
-
-.light .menu-open {
-  .border-border,
-  &.border-border {
-    @apply border-darkmode-border;
   }
 }

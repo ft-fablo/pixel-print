@@ -1,68 +1,72 @@
 {
   "site": {
-    "title": "Pixel print house",
+    "title": "Pixel Print House | Bespoke Printing & Packaging Studio",
     "base_url": "",
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_white": "/images/logo-light.png",
-    "logo_width": "141",
-    "logo_height": "100",
-    "logo_text": "Geeky"
+    "logo": "/images/logo-dark.png",
+    "logo_white": "/images/logo-white.png",
+    "logo_width": "180",
+    "logo_height": "52",
+    "logo_text": "Pixel Print House"
   },
   "settings": {
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 6,
+    "pagination": 9,
     "InnerPaginationOptions": {
       "enableTop": false,
       "enableBottom": true
     },
-    "summary_length": 200,
-    "blog_folder": "posts"
+    "summary_length": 160,
+    "blog_folder": "services"
   },
   "params": {
     "tag_manager_id": "",
-    "footer_content": "Print excellence in Every Pixel",
-    "copyright": "Designed By [fablo](https://github.com/ft-fablo)"
+    "footer_content": "Bespoke packaging, precision commercial printing, and corporate identity solutions crafted with disciplined standards in Ajman, UAE.",
+    "copyright": "© 2026 Pixel Print House. All rights reserved.",
+    "phone": "+971529780054",
+    "whatsapp": "+971529780054",
+    "email": "info@pixelprinthouse.com",
+    "location": "BC-890528, 26th Floor, Amber Gem Tower, Ajman, UAE",
+    "working_hours": "Mon - Sat: 9:00 AM - 8:00 PM"
   },
   "metadata": {
-    "meta_author": "Statichunt",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Geeky Nextjs Personal Blog Template"
+    "meta_author": "Pixel Print House",
+    "meta_image": "/images/logo.png",
+    "meta_description": "Pixel Print House – Refined commercial printing, custom rigid box packaging, luxury paper bags, corporate gifts, and signage in Ajman, UAE."
   },
   "widgets": {
     "about": {
-      "enable": false,
-      "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
+      "enable": true,
+      "content": "A design and print studio built for brands that value clarity, precision, and intentional craftsmanship."
     },
     "featured_posts": {
-      "enable": false,
-      "title": "Blog Categories",
-      "showPost": 3
+      "enable": true,
+      "title": "Core Services",
+      "showPost": 6
     },
     "categories": {
       "enable": false,
-      "title": "Blog Categories"
+      "title": "Categories"
     },
     "newsletter": {
       "enable": false,
-      "title": "Newsletter",
-      "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!",
+      "title": "Stay Connected",
+      "content": "Subscribe to receive our latest work and print finish guides.",
       "privacy_policy_page": "#",
       "malichipm_url": ""
     }
   },
   "disqus": {
     "enable": false,
-    "shortname": "themefisher-template",
+    "shortname": "",
     "settings": {}
   },
   "promotion": {
-  "enable": true,
-  "image": "/images/promo.jpg",
-  "location": "123 Main Street, New York, NY",
-  "lat": 40.712776,
-  "lng": -74.005974
-}
-
+    "enable": true,
+    "image": "/images/promotion.png",
+    "location": "BC-890528, 26th Floor, Amber Gem Tower, Ajman, UAE",
+    "lat": 25.393972,
+    "lng": 55.430667
+  }
 }

@@ -2,6 +2,7 @@ import config from "@config/config.json";
 import { plainify } from "@lib/utils/textConverter";
 import Footer from "@partials/Footer";
 import Header from "@partials/Header";
+import FloatingActions from "@components/FloatingActions";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -94,6 +95,8 @@ const Base = ({
       {/* main site */}
       <main>{children}</main>
       <Footer />
+      {/* Floating contact buttons (Bottom Right) */}
+      <FloatingActions />
     </>
   );
 };

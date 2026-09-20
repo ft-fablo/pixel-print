@@ -5,7 +5,7 @@ import parseMDX from "@lib/utils/mdxParser";
 
 const { blog_folder } = config.settings;
 
-const PostArticle = ({
+const ServiceDetailPage = ({
   post,
   mdxContent,
   slug,
@@ -59,9 +59,9 @@ export const getStaticProps = async ({ params }) => {
       mdxContent: mdxContent,
       slug: single,
       posts: posts,
-      currentPath: `/posts/${single}`,
+      currentPath: `/services/${single}`,
     },
   };
 };
 
-export default PostArticle;
+export default ServiceDetailPage;
